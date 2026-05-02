@@ -315,6 +315,7 @@ fn setup_tray(app: &AppHandle) -> Result<(), Box<dyn std::error::Error>> {
     let menu = create_tray_menu(app)?;
     
     let _ = TrayIconBuilder::new()
+        .icon(app.default_window_icon().unwrap().clone())
         .menu(&menu)
         .tooltip("Pomodoro Timer")
         .on_menu_event(|app, event| {

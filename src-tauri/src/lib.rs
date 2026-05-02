@@ -157,10 +157,6 @@ fn get_tooltip_text(state: &AppState) -> String {
     }
 }
 
-fn update_tray_tooltip(state: &AppState) -> String {
-    get_tooltip_text(state)
-}
-
 #[tauri::command]
 fn get_state(app: AppHandle, state: State<AppStateWrapper>) -> Result<AppState, String> {
     let app_state = state.0.lock().map_err(|e| e.to_string())?;

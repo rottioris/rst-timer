@@ -45,7 +45,10 @@ A cross-platform Pomodoro timer application built with Tauri, React, and TypeScr
 | ⚙️ Customizable Settings | Adjust durations, auto-start, and sound preferences |
 | 🖥️ System Tray | Run in background with quick controls |
 | 💾 Persistent Settings | Settings auto-save to config file |
-| 🌐 Multilingual UI | Interface in English, Spanish, Japanese |
+| 🌓 Theme Toggle | Switch between light/dark mode |
+| 📱 Side Panel Settings | Settings open from right side panel |
+| 🔄 Progress Ring | Animated circle shows timer progress |
+| ⏱️ Dynamic Tooltip | Tray icon shows timer countdown when running |
 
 ### Timer Modes
 
@@ -57,11 +60,9 @@ A cross-platform Pomodoro timer application built with Tauri, React, and TypeScr
 
 ## 📸 Screenshots
 
-| Main Window | Settings Panel |
-|------------|----------------|
-| ![Main Window](docs/images/screenshot-main.png) | ![Settings](docs/images/screenshot-settings.png) |
-
-> **Note**: Screenshots coming soon with actual app images.
+| Dark Mode | Light Mode |
+|-----------|-----------|
+| ![Dark Mode](docs/images/screenshot-dark.png) | ![Light Mode](docs/images/screenshot-light.png) |
 
 ## 🚀 Quick Start
 
@@ -124,26 +125,22 @@ npm run tauri build
 
 ```
 ┌─────────────────────────┐
-│   🍅 Pomodoro          │  ← Header with title
+│ ☀️ 🍅 Pomodoro    ⚙️  │  ← Theme + Settings buttons
 ├─────────────────────────┤
-│                         │
-│       25:00           │  ← Timer display (mode color)
-│                         │
+│       ● Running         │  ← Status indicator
 ├─────────────────────────┤
-│ [Focus][Short][Long]   │  ← Mode selector
+│    ╭─────────────╮    │
+│    │   25:00    │    │  ← Timer with progress ring
+│    │   Focus    │    │  ← Mode label
+│    ╰─────────────╯    │
 ├─────────────────────────┤
-│                         │
-│  [▶ Start]  [↺ Reset] │  ← Control buttons
-│                         │
+│ [Focus][Short][Long]   │  ← Mode selector buttons
 ├─────────────────────────┤
-│  🍅 Completed: 0/4    │  ← Session counter
+│                        │
+│  [▶ Start] [Reset]     │  ← Control buttons
+│                        │
 ├─────────────────────────┤
-│      Settings ▼        │  ← Expand settings
-│ ┌───────────────────┐ │
-│ │ Focus: [25] min   │ │  ← Settings panel
-│ │ Break: [5] min   │ │
-│ │ ...              │ │
-│ └───────────────────┘ │
+│  🍅 0 / 4 ○ ○ ○ ○    │  ← Session pills
 └─────────────────────────┘
 ```
 
@@ -151,12 +148,15 @@ npm run tauri build
 
 | Action | Shortcut |
 |--------|----------|
-| Start/Pause | Space (when focused) |
+| Start/Pause | `Space` (when focused) |
 | Reset Timer | `R` key |
 | Focus Mode | `1` key |
 | Short Break | `2` key |
 | Long Break | `3` key |
-| Open Settings | `S` key |
+
+### Settings Panel
+
+Click the ⚙️ button (top-right) to open the settings panel from the right side.
 
 ### System Tray Menu
 

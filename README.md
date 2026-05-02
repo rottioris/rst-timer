@@ -1,28 +1,271 @@
-# rst-timer
+<!-- markdownlint-disable MD041 -->
+<p align="center">
+  <img src="docs/images/app-icon.png" alt="rst-timer" width="128" height="128">
+</p>
 
-Pomodoro timer application built with Tauri, React and TypeScript.
+<h1 align="center">🍅 rst-timer</h1>
 
-## Features
+<p align="center">
+  <a href="https://github.com/rottioris/rst-timer/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/rottioris/rst-timer/build.yml?style=flat&logo=github" alt="Build Status">
+  </a>
+  <a href="https://github.com/rottioris/rst-timer/releases/latest">
+    <img src="https://img.shields.io/github/v/release/rottioris/rst-timer?style=flat" alt="Latest Release">
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/github/license/rottioris/rst-timer?style=flat" alt="License: MIT">
+  </a>
+  <a href="https://tauri.app">
+    <img src="https://img.shields.io/badge/Tauri-v2-blue?style=flat&logo=tauri" alt="Framework: Tauri v2">
+  </a>
+  <a href="https://github.com/rottioris/rst-timer/releases">
+    <img src="https://img.shields.io/github/downloads/rottioris/rst-timer/total?style=flat" alt="Downloads">
+  </a>
+</p>
 
-- Pomodoro timer with Focus, Short Break, and Long Break modes
-- System tray support
-- Native notifications
-- Customizable settings
-- Cross-platform (Linux, Windows, macOS)
+A cross-platform Pomodoro timer application built with Tauri, React, and TypeScript. Stay focused and productive with customizable work/break intervals.
 
-## Development
+## 📥 Downloads
+
+| OS | Download | Architecture |
+|----|----------|--------------|
+| 🪟 Windows | [Pomodoro-Timer_x64-setup.exe](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
+| 🐧 Linux | [Pomodoro-Timer_amd64.AppImage](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
+| 🍎 macOS | [Pomodoro-Timer_aarch64.dmg](https://github.com/rottioris/rst-timer/releases/latest) | arm64 |
+
+> **Note**: For other architectures or portable versions, check the [Releases](https://github.com/rottioris/rst-timer/releases) page.
+
+## ✨ Features
+
+| Feature | Description |
+|---------|-------------|
+| 🍅 Pomodoro Timer | Three timer modes: Focus (25min), Short Break (5min), Long Break (15min) |
+| 🔔 Native Notifications | System notifications when timer completes |
+| 📊 Session Tracking | Track completed Pomodoro sessions per day |
+| ⚙️ Customizable Settings | Adjust durations, auto-start, and sound preferences |
+| 🖥️ System Tray | Run in background with quick controls |
+| 💾 Persistent Settings | Settings auto-save to config file |
+| 🌐 Multilingual UI | Interface in English, Spanish, Japanese |
+
+### Timer Modes
+
+| Mode | Default | Color | Purpose |
+|------|---------|-------|--------|
+| 🔴 Focus | 25 min | `#E74C3C` | Deep work sessions |
+| 🟢 Short Break | 5 min | `#27AE60` | Quick rest |
+| 🔵 Long Break | 15 min | `#3498DB` | Extended break after 4 sessions |
+
+## 📸 Screenshots
+
+| Main Window | Settings Panel |
+|------------|----------------|
+| ![Main Window](docs/images/screenshot-main.png) | ![Settings](docs/images/screenshot-settings.png) |
+
+> **Note**: Screenshots coming soon with actual app images.
+
+## 🚀 Quick Start
+
+### Pre-built Binaries
+
+Download from [Releases](https://github.com/rottioris/rst-timer/releases):
 
 ```bash
-npm install
-npm run tauri dev
+# Linux (AppImage)
+chmod +x Pomodoro-Timer_*.AppImage
+./Pomodoro-Timer_*.AppImage
+
+# Windows
+# Run the .exe installer
+
+# macOS
+# Open the .dmg and drag to Applications
 ```
 
-## Build
+### Build from Source
+
+#### Prerequisites
+
+- [Node.js](https://nodejs.org/) 18+
+- [Rust](https://rustup.rs/) 1.70+
+
+**Linux extra dependencies:**
 
 ```bash
+# Ubuntu/Debian
+sudo apt-get install libwebkit2gtk-4.1-dev libappindicator3-dev librsvg2-dev patchelf
+
+# Fedora
+sudo dnf install webkit2gtk4.1-devel libappindicator-gtk3 librsvg2-tools patchelf
+
+# Arch Linux
+sudo pacman -S webkit2gtk-4.1 libappindicator3 librsvg patchelf
+```
+
+#### Build Steps
+
+```bash
+# Clone and enter directory
+git clone https://github.com/rottioris/rst-timer.git
+cd rst-timer
+
+# Install dependencies
+npm install
+
+# Development mode
+npm run tauri dev
+
+# Build for release
 npm run tauri build
 ```
 
-## License
+## 📖 Usage Guide
 
-MIT
+### Interface Overview
+
+```
+┌─────────────────────────┐
+│   🍅 Pomodoro          │  ← Header with title
+├─────────────────────────┤
+│                         │
+│       25:00           │  ← Timer display (mode color)
+│                         │
+├─────────────────────────┤
+│ [Focus][Short][Long]   │  ← Mode selector
+├─────────────────────────┤
+│                         │
+│  [▶ Start]  [↺ Reset] │  ← Control buttons
+│                         │
+├─────────────────────────┤
+│  🍅 Completed: 0/4    │  ← Session counter
+├─────────────────────────┤
+│      Settings ▼        │  ← Expand settings
+│ ┌───────────────────┐ │
+│ │ Focus: [25] min   │ │  ← Settings panel
+│ │ Break: [5] min   │ │
+│ │ ...              │ │
+│ └───────────────────┘ │
+└─────────────────────────┘
+```
+
+### Keyboard Shortcuts
+
+| Action | Shortcut |
+|--------|----------|
+| Start/Pause | Space (when focused) |
+| Reset Timer | `R` key |
+| Focus Mode | `1` key |
+| Short Break | `2` key |
+| Long Break | `3` key |
+| Open Settings | `S` key |
+
+### System Tray Menu
+
+Right-click the tray icon to access:
+
+- **Show Window** - Display the main window
+- **Start Timer** - Begin the current timer
+- **Pause Timer** - Pause the running timer
+- **Reset Timer** - Reset to initial state
+- **Quit** - Exit the application
+
+### Settings Configuration
+
+The app creates a config file at:
+
+| OS | Path |
+|----|------|
+| Linux | `~/.config/pomodoro-timer/settings.json` |
+| Windows | `%APPDATA%\pomodoro-timer\settings.json` |
+| macOS | `~/Library/Application Support/pomodoro-timer/settings.json` |
+
+**Settings JSON structure:**
+
+```json
+{
+  "focus_duration": 25,
+  "short_break_duration": 5,
+  "long_break_duration": 15,
+  "sessions_before_long_break": 4,
+  "auto_start_breaks": false,
+  "auto_start_pomodoros": false,
+  "sound_enabled": true
+}
+```
+
+## 🛠️ Development
+
+### Project Structure
+
+```
+rst-timer/
+├── src/                      # React frontend
+│   ├── App.tsx               # Main component
+│   ├── App.css               # Styles
+│   ├── main.tsx             # Entry point
+│   └── assets/              # Static assets
+├── src-tauri/                # Rust backend
+│   ├── src/
+│   │   ├── lib.rs           # Application logic
+│   │   └── main.rs          # Entry point
+│   ├── Cargo.toml           # Rust dependencies
+│   ├── tauri.conf.json     # Tauri configuration
+│   ├── capabilities/       # Permissions
+│   └── icons/              # App icons
+├── package.json             # Node dependencies
+├── vite.config.ts          # Vite configuration
+├── tsconfig.json          # TypeScript config
+└── CONTRIBUTING.md        # Contribution guide
+```
+
+### Available Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start Vite dev server |
+| `npm run build` | Build frontend |
+| `npm run tauri dev` | Start Tauri in dev mode |
+| `npm run tauri build` | Build for production |
+| `npm run tauri icon` | Generate icons from source |
+
+### Tech Stack
+
+| Layer | Technology |
+|-------|------------|
+| Framework | [Tauri v2](https://tauri.app) |
+| Frontend | [React 19](https://react.dev) + [TypeScript](https://www.typescriptlang.org/) |
+| Build Tool | [Vite 7](https://vite.dev) |
+| Backend | [Rust](https://www.rust-lang.org/) |
+| Styling | CSS (custom) |
+| Packaging | NSIS (Windows), AppImage (Linux), DMG (macOS) |
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our contributing guides:
+
+| Language | File |
+|----------|------|
+| English | [CONTRIBUTING.md](./CONTRIBUTING.md) |
+| Español | [CONTRIBUTING.es.md](./CONTRIBUTING.es.md) |
+| 日本語 | [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md) |
+
+## 📄 License
+
+This project is licensed under the [MIT License](./LICENSE).
+
+## 🙏 Acknowledgments
+
+- [Tauri](https://tauri.app) - Build truly native apps with web technologies
+- [React](https://react.dev) - The library for web and native user interfaces
+- [Pomodoro Technique](https://en.wikipedia.org/wiki/Pomodoro_Technique) - Original productivity method
+
+## 📬 Contact
+
+- **Author**: [rottioris](https://github.com/rottioris)
+- **Issues**: [Report a bug or request a feature](https://github.com/rottioris/rst-timer/issues)
+- **Discussions**: [Start a discussion](https://github.com/rottioris/rst-timer/discussions)
+
+---
+
+<p align="center">
+  Made with ❤️ by <a href="https://github.com/rottioris">rottioris</a>
+</p>

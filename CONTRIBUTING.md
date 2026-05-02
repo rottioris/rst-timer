@@ -2,6 +2,16 @@
 
 Thank you for your interest in contributing to rst-timer! This guide will help you get started.
 
+## 🌍 Choose Your Language
+
+| Language | Guide |
+|----------|-------|
+| 🇺🇸 English | (You're viewing) |
+| 🇪🇸 Español | [CONTRIBUTING.es.md](./CONTRIBUTING.es.md) |
+| 🇯🇵 日本語 | [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md) |
+
+---
+
 ## Ways to Contribute
 
 | Type | Description |

@@ -2,6 +2,16 @@
 
 ¡Gracias por tu interés en contribuir a rst-timer! Esta guía te ayudará a comenzar.
 
+## 🌍 Elige Tu Idioma
+
+| Idioma | Guía |
+|----------|-------|
+| 🇺🇸 English | [CONTRIBUTING.md](./CONTRIBUTING.md) |
+| 🇪🇸 Español | (Estás viendo) |
+| 🇯🇵 日本語 | [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md) |
+
+---
+
 ## Formas de Contribuir
 
 | Tipo | Descripción |
@@ -27,7 +37,7 @@ cd rst-timer
 ### 3. Crear una Rama de Funciones
 
 ```bash
-git checkout -b功能/ nombre-de-tu-funcion
+git checkout -b feature/nombre-de-tu-funcion
 # o
 git checkout -b bugfix/descripcion-del-error
 ```
@@ -76,10 +86,10 @@ refactor: simplificar lógica del temporizador
 | Tipo | Descripción |
 |------|-------------|
 | `feat` | Nueva función |
-| `fix` | Corrección de error |
+| `fix` | Corrección de	error |
 | `docs` | Documentación |
 | `refactor` | Refactorización |
-| `test` | Añadir pruebas |
+| `test` | Añadir	pruebas |
 | `chore` | Mantenimiento |
 
 ## Enviar Cambios
@@ -98,10 +108,10 @@ git add .
 git commit -m "tipo: descripción de los cambios"
 ```
 
-### 3. push a tu Bifurcación
+### 3. Push a tu Bifurcación
 
 ```bash
-git push origin功能/ nombre-de-tu-funcion
+git push origin feature/nombre-de-tu-funcion
 ```
 
 ### 4. Crear una Pull Request

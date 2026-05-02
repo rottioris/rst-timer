@@ -2,6 +2,16 @@
 
 rst-timer への貢献に興味をお持ちいただきありがとうございます！このガイドではじめ方を説明します。
 
+## 🌍 言語を選択
+
+| 言語 | ガイド |
+|----------|-------|
+| 🇺🇸 English | [CONTRIBUTING.md](./CONTRIBUTING.md) |
+| 🇪🇸 Español | [CONTRIBUTING.es.md](./CONTRIBUTING.es.md) |
+| 🇯🇵 日本語 | (表示中) |
+
+---
+
 ## 貢献する方法
 
 | 種類 | 説明 |

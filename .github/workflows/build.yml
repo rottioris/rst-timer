@@ -47,13 +47,16 @@ jobs:
 
       - name: Set version from tag
         if: startsWith(github.ref_name, 'v')
+        env:
+          TAG_VERSION: ${{ github.ref_name }}
         run: |
-          export VERSION=${GITHUB_REF_NAME#v}
+          VERSION=${TAG_VERSION#v}
           echo "VERSION=$VERSION" >> $GITHUB_ENV
           node -e "
+            const VERSION = process.env.VERSION;
             const fs = require('fs');
             const config = JSON.parse(fs.readFileSync('src-tauri/tauri.conf.json', 'utf8'));
-            config.version = '$VERSION';
+            config.version = VERSION;
             fs.writeFileSync('src-tauri/tauri.conf.json', JSON.stringify(config, null, 2));
           "
           node -e "

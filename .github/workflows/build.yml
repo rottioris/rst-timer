@@ -16,7 +16,7 @@ jobs:
           - platform: windows-latest
             args: --bundles nsis
           - platform: ubuntu-latest
-            args: --bundles appimage
+            args: --bundles appimage,deb
           - platform: macos-latest
             args: --bundles dmg
 

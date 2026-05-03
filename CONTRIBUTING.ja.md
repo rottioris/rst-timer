@@ -1,145 +1,77 @@
-# rst-timer への貢献
+# Rustick への貢献
 
-rst-timer への貢献に興味をお持ちいただきありがとうございます！このガイドではじめ方を説明します。
+Rustick への貢献に興味をお持ちいただきありがとうございます！このガイドではじめ方を説明します。
 
-## 🌍 言語を選択
+## 行動規範
 
-| 言語 | ガイド |
-|----------|-------|
-| 🇺🇸 English | [CONTRIBUTING.md](./CONTRIBUTING.md) |
-| 🇪🇸 Español | [CONTRIBUTING.es.md](./CONTRIBUTING.es.md) |
-| 🇯🇵 日本語 | (表示中) |
+尊重し、建设的であるようにしましょう。すべての背景を持つ貢献者を受け入れます。
 
----
+## 貢献方法
 
-## 貢献する方法
+### バグの報告
 
-| 種類 | 説明 |
-|------|-------|
-| 🐛 バグ報告 | バグを見つけましたか？お知らせください！ |
-| 💡 機能リクエスト | アイデアがありますか？共有してください！ |
-| 🔧 コード貢献 | バグを修正したり機能を追加したり |
-| 📖 ドキュメント | ドキュメントの改善や翻訳 |
+1. バグが [すでに存在する](https://github.com/rottioris/rst-timer/issues) か確認します
+2. 新しい issue をオープンします：
+   - 明確なタイトル
+   - 再現の手順
+   - 期待される行動 vs 実際の行動
+   - 該当する場合はスクリーンショット
 
-## はじめましょう
+### 機能の提案
 
-### 1. リポジトリをフォーク
+1. [既存の提案](https://github.com/rottioris/rst-timer/issues) を検索します
+2. `feature-request` としてタグ付けされた新しい issue をオープンします
+3. ユースケースと提案されたソリューションを説明します
 
-[GitHub ページ](https://github.com/rottioris/rst-timer)の **Fork** ボタンをクリックします。
+### Pull Requests
 
-### 2. フォークをクローン
+1. リポジトリを **Fork** します
 
 ```bash
 git clone https://github.com/あなたのユーザー名/rst-timer.git
 cd rst-timer
 ```
 
-### 3. フィーチャーブランチを作成
+2. 新しいブランチを作成します
 
 ```bash
-git checkout -b feature/あなたの機能名
-# または
-git checkout -b bugfix/バグの説明
+git checkout -b feature/私の新しい機能
 ```
 
-## 開発セットアップ
-
-### 前提条件
-
-- Node.js 18+
-- Rust 1.70+
-- npm または pnpm
-
-### 依存関係をインストール
-
-```bash
-npm install
-```
-
-### 開発モードで実行
-
-```bash
-npm run tauri dev
-```
-
-## 変更を加える
-
-### コードスタイル
-
-- 意味のある変数名を使用する
-- 複雑なロジックにはコメントを追加
-- 既存のパターンを真似る
-
-### コミットメッセージ
-
-明確なコミットメッセージを使用:
-
-```
-feat: ダークモードのサポートを追加
-fix: タイマーが正しくリセットされない問題を修正
-docs: インストールガイドを更新
-refactor: タイマーロジックを簡素化
-```
-
-### コミットタイプ
-
-| タイプ | 説明 |
-|--------|-------|
-| `feat` | 新機能 |
-| `fix` | バグ修正 |
-| `docs` | ドキュメント |
-| `refactor` | リファクタリング |
-| `test` | テスト追加 |
-| `chore` | メンテナンス |
-
-## 変更を送信
-
-### 1. 変更をテスト
-
-```bash
-# アプリをビルド
-npm run tauri build
-```
-
-### 2. 変更をコミット
+3. 変更を行いコミットします
 
 ```bash
 git add .
-git commit -m "タイプ: 変更の説明"
+git commit -m "新しい機能を追加"
 ```
 
-### 3. フォークにプッシュ
+4. あなたの fork にプッシュします
 
 ```bash
-git push origin feature/あなたの機能名
+git push origin feature/私の新しい機能
 ```
 
-### 4. プルリクエストを作成
+5. **Pull Request** をオープンします
 
-1. 元のリポジトリに移動
-2. **New Pull Request** をクリック
-3. あなたのブランチを選択
-4. 説明を書いて送信
+### 開発環境のセットアップ
 
-## プルリクエストのガイドライン
+```bash
+# 依存関係をインストール
+npm install
 
-- **何を変更したか** と **なぜ** を説明
-- **関連するイシューをリンク** (例: "Fixes #123")
-- UIの変更がある場合は **スクリーンショット** を含める
-- できれば **複数のプラットフォームでテスト**
+# 開発モードを開始
+npm run tauri dev
+```
 
-## 行動規範
+### コーディング標準
 
-- 尊重aksana 包括的であること
-- 新規参加者を歓迎すること
-- 建設的な批判を優雅に受け入れること
-- コミュニティにとって最善なことに焦点を当てる
+- フロントエンドのコードには TypeScript を使用
+- バックエンドのロジックには Rust を使用
+- コミット前に `npm run build` を実行
+- 変更は焦点を絞り、最小限に保ちます
 
-## 質問がある場合は？
+## リソース
 
-- [イシューを開く](https://github.com/rottioris/rst-timer/issues)
-- [ディスカッションを開始](https://github.com/rottioris/rst-timer/discussions)
-
----
-
-快乐的貢献！🎉
+- [GitHub リポジトリ](https://github.com/rottioris/rst-timer)
+- [Issues](https://github.com/rottioris/rst-timer/issues)
+- [ディスカッション](https://github.com/rottioris/rst-timer/discussions)

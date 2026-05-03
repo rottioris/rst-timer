@@ -1,146 +1,77 @@
-# Contributing to rst-timer
+# Contributing to Rustick
 
-Thank you for your interest in contributing to rst-timer! This guide will help you get started.
+Thank you for your interest in contributing to Rustick! This guide will help you get started.
 
-## 🌍 Choose Your Language
+## Code of Conduct
 
-| Language | Guide |
-|----------|-------|
-| 🇺🇸 English | (You're viewing) |
-| 🇪🇸 Español | [CONTRIBUTING.es.md](./CONTRIBUTING.es.md) |
-| 🇯🇵 日本語 | [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md) |
+Be respectful and constructive. We welcome contributors from all backgrounds.
 
----
+## How to Contribute
 
-## Ways to Contribute
+### Reporting Bugs
 
-| Type | Description |
-|------|-------------|
-| 🐛 Bug Reports | Found a bug? Let us know! |
-| 💡 Feature Requests | Have an idea? Share it! |
-| 🔧 Code Contributions | Fix bugs or add features |
-| 📖 Documentation | Improve docs or translations |
+1. Check if the bug [already exists](https://github.com/rottioris/rst-timer/issues)
+2. Open a new issue with:
+   - Clear title
+   - Steps to reproduce
+   - Expected vs actual behavior
+   - Screenshots if applicable
 
-## Getting Started
+### Suggesting Features
 
-### 1. Fork the Repository
+1. Search [existing suggestions](https://github.com/rottioris/rst-timer/issues)
+2. Open a new issue tagged as `feature-request`
+3. Explain the use case and proposed solution
 
-Click the **Fork** button on the [GitHub page](https://github.com/rottioris/rst-timer).
+### Pull Requests
 
-### 2. Clone Your Fork
+1. **Fork** the repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/rst-timer.git
 cd rst-timer
 ```
 
-### 3. Create a Feature Branch
+2. Create a new branch
 
 ```bash
-git checkout -b feature/your-feature-name
-# or
-git checkout -b bugfix/issue-description
+git checkout -b feature/my-new-feature
 ```
 
-## Development Setup
-
-### Prerequisites
-
-- Node.js 18+
-- Rust 1.70+
-- npm or pnpm
-
-### Install Dependencies
-
-```bash
-npm install
-```
-
-### Run in Development Mode
-
-```bash
-npm run tauri dev
-```
-
-## Making Changes
-
-### Code Style
-
-- Use meaningful variable names
-- Add comments for complex logic
-- Follow existing code patterns
-
-### Commit Messages
-
-Use clear commit messages:
-
-```
-feat: add dark mode support
-fix: timer not resetting correctly
-docs: update installation guide
-refactor: simplify timer logic
-```
-
-### Types of Commits
-
-| Type | Description |
-|------|-------------|
-| `feat` | New feature |
-| `fix` | Bug fix |
-| `docs` | Documentation |
-| `refactor` | Code refactoring |
-| `test` | Adding tests |
-| `chore` | Maintenance |
-
-## Submitting Changes
-
-### 1. Test Your Changes
-
-```bash
-# Build the application
-npm run tauri build
-```
-
-### 2. Commit Your Changes
+3. Make your changes and commit
 
 ```bash
 git add .
-git commit -m "type: description of changes"
+git commit -m "Add new feature"
 ```
 
-### 3. Push to Your Fork
+4. Push to your fork
 
 ```bash
-git push origin feature/your-feature-name
+git push origin feature/my-new-feature
 ```
 
-### 4. Create a Pull Request
+5. Open a **Pull Request**
 
-1. Go to the original repository
-2. Click **New Pull Request**
-3. Select your branch
-4. Fill in the description
-5. Submit
+### Development Setup
 
-## Pull Request Guidelines
+```bash
+# Install dependencies
+npm install
 
-- **Describe what you changed** and **why**
-- **Link related issues** (e.g., "Fixes #123")
-- **Include screenshots** if UI changes
-- **Test on multiple platforms** if possible
+# Start development mode
+npm run tauri dev
+```
 
-## Code of Conduct
+### Coding Standards
 
-- Be respectful and inclusive
-- Welcome newcomers
-- Accept constructive criticism gracefully
-- Focus on what is best for the community
+- Use TypeScript for frontend code
+- Use Rust for backend logic
+- Run `npm run build` before committing
+- Keep changes focused and minimal
 
-## Questions?
+## Resources
 
-- Open an [Issue](https://github.com/rottioris/rst-timer/issues)
-- Start a [Discussion](https://github.com/rottioris/rst-timer/discussions)
-
----
-
-Happy contributing! 🎉
+- [GitHub Repository](https://github.com/rottioris/rst-timer)
+- [Issues](https://github.com/rottioris/rst-timer/issues)
+- [Discussions](https://github.com/rottioris/rst-timer/discussions)

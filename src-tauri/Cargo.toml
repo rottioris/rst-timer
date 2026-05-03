@@ -1,12 +1,12 @@
 [package]
-name = "pomodoro-timer"
-version = "0.1.3"
-description = "A minimalist Pomodoro timer with system tray support"
+name = "rustick"
+version = "0.1.4"
+description = "A minimalist productivity timer with system tray support"
 authors = ["Ori"]
 edition = "2021"
 
 [lib]
-name = "pomodoro_timer_lib"
+name = "rustick_lib"
 crate-type = ["staticlib", "cdylib", "rlib"]
 
 [build-dependencies]

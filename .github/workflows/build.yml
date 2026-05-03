@@ -66,8 +66,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: ${{ github.ref_name }}
-          releaseName: 'Pomodoro Timer ${{ github.ref_name }}'
-          releaseBody: 'Automated release build for Pomodoro Timer'
+          releaseName: 'Rustick ${{ github.ref_name }}'
+          releaseBody: 'Automated release build for Rustick'
           releaseDraft: true
           prerelease: false
           args: ${{ matrix.args }}

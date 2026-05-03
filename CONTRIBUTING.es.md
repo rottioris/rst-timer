@@ -1,146 +1,77 @@
-# Contribuir a rst-timer
+# Contribuir a Rustick
 
-¡Gracias por tu interés en contribuir a rst-timer! Esta guía te ayudará a comenzar.
+¡Gracias por tu interés en contribuir a Rustick! Esta guía te ayudará a comenzar.
 
-## 🌍 Elige Tu Idioma
+## Código de Conducta
 
-| Idioma | Guía |
-|----------|-------|
-| 🇺🇸 English | [CONTRIBUTING.md](./CONTRIBUTING.md) |
-| 🇪🇸 Español | (Estás viendo) |
-| 🇯🇵 日本語 | [CONTRIBUTING.ja.md](./CONTRIBUTING.ja.md) |
+Sé respetuoso y constructivo. acogemos a contribuyentes de todos los orígenes.
 
----
+## Cómo Contribuir
 
-## Formas de Contribuir
+### Reportar Errores
 
-| Tipo | Descripción |
-|------|-------------|
-| 🐛 Reportes de Errores | ¿Encontraste un error? ¡Cuéntanos! |
-| 💡 Solicitudes de Funciones | ¿Tienes una idea? ¡Compártela! |
-| 🔧 Contribuciones de Código | Corrige errores o añade funciones |
-| 📖 Documentación | Mejora la documentación o traducciones |
+1. Verifica si el error [ya existe](https://github.com/rottioris/rst-timer/issues)
+2. Abre un nuevo issue con:
+   - Título claro
+   - Pasos para reproducir
+   - Comportamiento esperado vs actual
+   - Capturas de pantalla si aplica
 
-## Comenzar
+### Sugerir Funciones
 
-### 1. Bifurcar el Repositorio
+1. Busca [sugerencias existentes](https://github.com/rottioris/rst-timer/issues)
+2. Abre un nuevo issue etiquetado como `feature-request`
+3. Explica el caso de uso y la solución propuesta
 
-Haz clic en el botón **Fork** en la [página de GitHub](https://github.com/rottioris/rst-timer).
+### Pull Requests
 
-### 2. Clonar tu Bifurcación
+1. Haz **Fork** del repositorio
 
 ```bash
 git clone https://github.com/TU_USUARIO/rst-timer.git
 cd rst-timer
 ```
 
-### 3. Crear una Rama de Funciones
+2. Crea una nueva rama
 
 ```bash
-git checkout -b feature/nombre-de-tu-funcion
-# o
-git checkout -b bugfix/descripcion-del-error
+git checkout -b feature/mi-nueva-funcionalidad
 ```
 
-## Configuración para Desarrollo
-
-### Requisitos Previos
-
-- Node.js 18+
-- Rust 1.70+
-- npm o pnpm
-
-### Instalar Dependencias
-
-```bash
-npm install
-```
-
-### Ejecutar en Modo Desarrollo
-
-```bash
-npm run tauri dev
-```
-
-## Realizar Cambios
-
-### Estilo de Código
-
-- Usa nombres de variables significativos
-- Añade comentarios para lógica compleja
-- Sigue los patrones de código existentes
-
-### Mensajes de Commit
-
-Usa mensajes de commit claros:
-
-```
-feat: añadir modo oscuro
-fix: el temporizador no se reinicia correctamente
-docs: actualizar guía de instalación
-refactor: simplificar lógica del temporizador
-```
-
-### Tipos de Commits
-
-| Tipo | Descripción |
-|------|-------------|
-| `feat` | Nueva función |
-| `fix` | Corrección de	error |
-| `docs` | Documentación |
-| `refactor` | Refactorización |
-| `test` | Añadir	pruebas |
-| `chore` | Mantenimiento |
-
-## Enviar Cambios
-
-### 1. Prueba tus Cambios
-
-```bash
-# Construir la aplicación
-npm run tauri build
-```
-
-### 2. Hacer Commit de tus Cambios
+3. Haz tus cambios y commitea
 
 ```bash
 git add .
-git commit -m "tipo: descripción de los cambios"
+git commit -m "Añadir nueva funcionalidad"
 ```
 
-### 3. Push a tu Bifurcación
+4. Push a tu fork
 
 ```bash
-git push origin feature/nombre-de-tu-funcion
+git push origin feature/mi-nueva-funcionalidad
 ```
 
-### 4. Crear una Pull Request
+5. Abre un **Pull Request**
 
-1. Ve al repositorio original
-2. Haz clic en **New Pull Request**
-3. Selecciona tu rama
-4. Rellena la descripción
-5. Envía
+### Configuración de Desarrollo
 
-## Guías de Pull Request
+```bash
+# Instalar dependencias
+npm install
 
-- **Describe qué cambiaste** y **por qué**
-- **Enlaza issues relacionados** (ej., "Soluciona #123")
-- **Incluye capturas de pantalla** si hay cambios de interfaz
-- **Prueba en múltiples plataformas** si es posible
+# Iniciar modo desarrollo
+npm run tauri dev
+```
 
-## Código de Conducta
+### Estándares de Código
 
-- Sé respetuoso e inclusivo
-- Bienvenidas las personas nuevas
-- Acepta la crítica constructiva con gracia
-- Enfócate en lo mejor para la comunidad
+- Usa TypeScript para código del frontend
+- Usa Rust para lógica del backend
+- Ejecuta `npm run build` antes de.commitir
+- Mantén los cambios focalizados y mínimos
 
-## ¿Preguntas?
+## Recursos
 
-- Abre un [Issue](https://github.com/rottioris/rst-timer/issues)
-- Inicia una [Discusión](https://github.com/rottioris/rst-timer/discussions)
-
----
-
-¡Feliz contribución! 🎉
+- [Repositorio GitHub](https://github.com/rottioris/rst-timer)
+- [Issues](https://github.com/rottioris/rst-timer/issues)
+- [Discusiones](https://github.com/rottioris/rst-timer/discussions)

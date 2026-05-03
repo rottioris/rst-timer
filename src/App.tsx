@@ -2,6 +2,7 @@ import { useState, useEffect, useCallback, useMemo } from "react";
 import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 import { getCurrentWindow } from "@tauri-apps/api/window";
+import appIcon from "./assets/icon.png";
 import "./App.css";
 
 type TimerMode = "Focus" | "ShortBreak" | "LongBreak";
@@ -180,9 +181,9 @@ function App() {
       try {
         const win = getCurrentWindow();
         if (state?.timer_state === "Running") {
-          await win.setTitle(`🍅 ${formatTime(state.remaining_seconds)} - Pomodoro`);
+          await win.setTitle(`🍅 ${formatTime(state.remaining_seconds)} - Rustick`);
         } else {
-          await win.setTitle("Pomodoro Timer");
+          await win.setTitle("Rustick");
         }
       } catch (e) {
         console.error("Title update error:", e);
@@ -271,8 +272,8 @@ function App() {
           {theme === "light" ? "🌙" : "☀️"}
         </button>
         <h1 className="title">
-          <span className="tomato-icon">🍅</span>
-          Pomodoro
+          <img src={appIcon} alt="Rustick" className="app-icon" />
+          Rustick
         </h1>
         <button className="settings-btn" onClick={() => setSettingsOpen(true)}>
           ⚙️
@@ -333,7 +334,7 @@ function App() {
       </div>
 
       <div className="session-info">
-        <span>🍅</span>
+        <img src={appIcon} alt="Rustick" className="session-icon" />
         <span>
           {state?.completed_sessions || 0} / {settings.sessions_before_long_break}
         </span>

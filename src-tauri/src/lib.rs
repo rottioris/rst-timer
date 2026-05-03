@@ -116,7 +116,7 @@ impl Default for AppStateWrapper {
 }
 
 fn get_config_path() -> Option<std::path::PathBuf> {
-    dirs::config_dir().map(|p| p.join("pomodoro-timer").join("settings.json"))
+    dirs::config_dir().map(|p| p.join("rustick").join("settings.json"))
 }
 
 fn load_settings() -> Settings {
@@ -153,7 +153,7 @@ fn get_tooltip_text(state: &AppState) -> String {
     match state.timer_state {
         TimerState::Running => format!("⏱ {} - {} | Running", get_time_string(state.remaining_seconds), state.mode.name()),
         TimerState::Paused => format!("⏸ {} - {} | Paused", get_time_string(state.remaining_seconds), state.mode.name()),
-        TimerState::Idle => format!("🍅 Pomodoro | {}", state.mode.name()),
+        TimerState::Idle => format!("🍅 Rustick | {}", state.mode.name()),
     }
 }
 
@@ -259,7 +259,7 @@ fn tick_timer(app: AppHandle, state: State<AppStateWrapper>) -> Result<AppState,
             let body = format!("{} completed! Time for {}.", completed_mode.name(), next_mode.name());
             let _ = app.notification()
                 .builder()
-                .title("Pomodoro Timer")
+                .title("Rustick")
                 .body(&body)
                 .show();
             let _ = app.emit("play-sound", ());
@@ -371,7 +371,7 @@ fn setup_tray(app: &AppHandle) -> Result<(), Box<dyn std::error::Error>> {
     TrayIconBuilder::new()
         .icon(icon)
         .menu(&menu)
-        .tooltip("🍅 Pomodoro Timer")
+        .tooltip("🍅 Rustick")
         .on_menu_event(|app, event| {
             let id = event.id.as_ref();
             match id {
@@ -443,7 +443,7 @@ pub fn run() {
         .manage(AppStateWrapper(Mutex::new(app_state)))
         .setup(|app| {
             setup_tray(app.handle())?;
-            log::info!("Pomodoro Timer application started");
+            log::info!("Rustick application started");
             Ok(())
         })
         .on_window_event(|window, event| {

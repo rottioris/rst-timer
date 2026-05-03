@@ -116,8 +116,16 @@ body {
   gap: var(--space-sm);
 }
 
-.tomato-icon {
-  font-size: 24px;
+.app-icon {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+}
+
+.session-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
 }
 
 /* Settings Toggle Button */

@@ -1,9 +1,9 @@
 <!-- markdownlint-disable MD041 -->
 <p align="center">
-  <img src="docs/images/app-icon.png" alt="rst-timer" width="128" height="128">
+  <img src="docs/images/app-icon.png" alt="rustick" width="128" height="128">
 </p>
 
-<h1 align="center">🍅 rst-timer</h1>
+<h1 align="center">🍅 Rustick</h1>
 
 <p align="center">
   <a href="https://github.com/rottioris/rst-timer/actions">
@@ -23,15 +23,15 @@
   </a>
 </p>
 
-A cross-platform Pomodoro timer application built with Tauri, React, and TypeScript. Stay focused and productive with customizable work/break intervals.
+A cross-platform productivity timer application built with Tauri, React, and TypeScript. Stay focused and productive with customizable work/break intervals.
 
 ## 📥 Downloads
 
 | OS | Download | Architecture |
 |----|----------|--------------|
-| 🪟 Windows | [Pomodoro-Timer_x64-setup.exe](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
-| 🐧 Linux | [Pomodoro-Timer_amd64.AppImage](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
-| 🍎 macOS | [Pomodoro-Timer_aarch64.dmg](https://github.com/rottioris/rst-timer/releases/latest) | arm64 |
+| 🪟 Windows | [Rustick_x64-setup.exe](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
+| 🐧 Linux | [Rustick_amd64.AppImage](https://github.com/rottioris/rst-timer/releases/latest) | x64 |
+| 🍎 macOS | [Rustick_aarch64.dmg](https://github.com/rottioris/rst-timer/releases/latest) | arm64 |
 
 > **Note**: For other architectures or portable versions, check the [Releases](https://github.com/rottioris/rst-timer/releases) page.
 
@@ -39,9 +39,9 @@ A cross-platform Pomodoro timer application built with Tauri, React, and TypeScr
 
 | Feature | Description |
 |---------|-------------|
-| 🍅 Pomodoro Timer | Three timer modes: Focus (25min), Short Break (5min), Long Break (15min) |
+| 🍅 Productivity Timer | Three timer modes: Focus (25min), Short Break (5min), Long Break (15min) |
 | 🔔 Native Notifications | System notifications when timer completes |
-| 📊 Session Tracking | Track completed Pomodoro sessions per day |
+| 📊 Session Tracking | Track completed focus sessions per day |
 | ⚙️ Customizable Settings | Adjust durations, auto-start, and sound preferences |
 | 🖥️ System Tray | Run in background with quick controls |
 | 💾 Persistent Settings | Settings auto-save to config file |
@@ -72,8 +72,8 @@ Download from [Releases](https://github.com/rottioris/rst-timer/releases):
 
 ```bash
 # Linux (AppImage)
-chmod +x Pomodoro-Timer_*.AppImage
-./Pomodoro-Timer_*.AppImage
+chmod +x Rustick_*.AppImage
+./Rustick_*.AppImage
 
 # Windows
 # Run the .exe installer
@@ -125,7 +125,7 @@ npm run tauri build
 
 ```
 ┌─────────────────────────┐
-│ ☀️ 🍅 Pomodoro    ⚙️  │  ← Theme + Settings buttons
+│ ☀️ 🍅 Rustick    ⚙️  │  ← Theme + Settings buttons
 ├─────────────────────────┤
 │       ● Running         │  ← Status indicator
 ├─────────────────────────┤
@@ -174,9 +174,9 @@ The app creates a config file at:
 
 | OS | Path |
 |----|------|
-| Linux | `~/.config/pomodoro-timer/settings.json` |
-| Windows | `%APPDATA%\pomodoro-timer\settings.json` |
-| macOS | `~/Library/Application Support/pomodoro-timer/settings.json` |
+| Linux | `~/.config/rustick/settings.json` |
+| Windows | `%APPDATA%\rustick\settings.json` |
+| macOS | `~/Library/Application Support/rustick/settings.json` |
 
 **Settings JSON structure:**
 
@@ -197,7 +197,7 @@ The app creates a config file at:
 ### Project Structure
 
 ```
-rst-timer/
+rustick/
 ├── src/                      # React frontend
 │   ├── App.tsx               # Main component
 │   ├── App.css               # Styles
